@@ -17,6 +17,9 @@
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
+.logo.vue:hover {
+  filter: drop-shadow(0 0 2em #00ffbfaa);
+}
 
 @keyframes logo-spin {
   from {
@@ -28,10 +31,23 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  a:nth-of-type(1) .logo {
+    animation: logo-spin infinite 30s linear;
   }
 }
+.animate-up-down {
+  -webkit-animation: mover 1s infinite alternate;
+  animation: mover 1s infinite alternate;
+}
+
+@keyframes mover {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-5px);
+  }
 
 .card {
   padding: 2em;

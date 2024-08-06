@@ -1,23 +1,31 @@
-import { useState } from 'react';
+//import { useState } from 'react';
 import reactLogo from './assets/react.svg';
 import tailWindLogo from './assets/tailwind.svg';
+import linkedinLogo from './assets/Linkedin.svg';
 import viteLogo from '/vite.svg';
 import vueLogo from './assets/Vue.svg';
 import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0);
+  // const [count, setCount] = useState(0);
 
   return (
-    <>
-      <h2>Welcome to</h2>
-      <h1>Nícolas Cendron's Portfolio Page</h1>
-
-      <div>
+    <div className='container'>
+      <a href='https://www.linkedin.com/in/nicolas-cendron-fernandes/'>
+        <img
+          src={linkedinLogo}
+          className=' top-right logo blue linkedin animate-up-down'
+          title='Linkedin'
+          alt='Linkdin logo'
+        />
+      </a>
+      <h1 className='title'>Nícolas Cendron</h1>
+      <h3 className='subtitle'>Software Developer</h3>
+      <div className='logos'>
         <a href='https://react.dev' target='_blank'>
           <img
             src={reactLogo}
-            className='logo react'
+            className='logo react blue'
             title='React'
             alt='React logo'
           />
@@ -31,13 +39,13 @@ function App() {
         <a href='https://tailwindcss.com/' target='_blank'>
           <img
             src={tailWindLogo}
-            className='logo react animate-up-down'
+            className='logo blue animate-up-down'
             title='Tailwind'
             alt='Tailwind logo'
           />
         </a>
       </div>
-    </>
+    </div>
   );
 }
 

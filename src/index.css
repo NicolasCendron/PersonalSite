@@ -1,1 +1,8 @@
 @import "tailwindcss";
+@config "../tailwind.config.ts";
+
+@layer base {
+  body {
+    @apply bg-bg text-text font-sans;
+  }
+}

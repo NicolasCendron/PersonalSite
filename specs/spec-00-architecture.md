@@ -23,6 +23,7 @@ Lock the stack, folder structure, and development constraints for the personal s
 | Routing      | React Router                  | v7       |
 | Testing      | Jest + React Testing Library  | Latest   |
 | Linting      | ESLint + Prettier             | Latest   |
+| i18n         | i18next + react-i18next       | Latest   |
 | Deployment   | Vercel (GitHub CD)            | —        |
 
 ---
@@ -57,6 +58,11 @@ src/
   styles/             # Global CSS / Tailwind base + tokens.ts
   types/              # Shared TypeScript types
   data/               # Static content (projects list, metadata)
+  i18n/
+    index.ts          # i18next setup
+    locales/
+      en.json         # English strings
+      es.json         # Spanish strings
   router.tsx          # Route definitions
 specs/                # Feature specs (this folder)
 tests/                # Mirrors src/ structure
@@ -77,6 +83,16 @@ git push main
 - `.dev` TLD is on the HSTS preload list — HTTPS is mandatory and enforced.
 - SSL: free Let's Encrypt cert via Vercel (handled automatically).
 - No HTTP fallback needed; Vercel enforces HTTPS by default.
+
+---
+
+## i18n Rules
+- Languages: **English** and **Spanish**
+- No hardcoded text strings in components — all through translation keys
+- Key format: `section.component.element` (e.g. `hero.headline.title`)
+- Language switcher: future component (spec TBD)
+- Detection: browser language (`navigator.language`) — Spanish (`es-*`) → ES, everything else → EN
+- Override: manual language switch persisted to `localStorage`
 
 ---
 

@@ -1,0 +1,14 @@
+{
+  "hero": {
+    "name": "Nicolas Cendron",
+    "availability": "Open to opportunities",
+    "location": "Spain · EU Citizen",
+    "headline": "Frontend Lead.\nBuilding at the edge\nof the browser.",
+    "subheadline": "8 years of frontend. 4 years leading teams.\nReal-time data, Canvas, WebAssembly, BFF —\nwhere most UIs stop, I start.\nVue specialist. Expanding into React & Angular.",
+    "languages": "EN · PT Fluent  ·  ES Intermediate  ·  IT Learning",
+    "cta": {
+      "primary": "See my work",
+      "secondary": "Get in touch"
+    }
+  }
+}

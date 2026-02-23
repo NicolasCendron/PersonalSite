@@ -11,7 +11,7 @@ export function HeroAvatar({ src, alt }: HeroAvatarProps) {
           data-testid="hero-avatar-img"
           src={src}
           alt={alt}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-[center_20%]"
         />
       </div>
     </div>

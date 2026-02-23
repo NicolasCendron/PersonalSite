@@ -10,5 +10,25 @@
       "primary": "See my work",
       "secondary": "Get in touch"
     }
+  },
+  "contact": {
+    "heading": "Let's work together.",
+    "subheading": "I'm open to frontend roles, tech lead positions, and consulting across Europe.",
+    "ariaLabel": "Contact",
+    "email": "Send an email",
+    "phone": "Call or WhatsApp",
+    "linkedin": "Connect on LinkedIn",
+    "github": "See my GitHub"
+  },
+  "navbar": {
+    "brand": "Nicolas Cendron",
+    "ariaLabel": "Main navigation",
+    "github": "GitHub profile",
+    "linkedin": "LinkedIn profile",
+    "langSwitch": {
+      "en": "EN",
+      "es": "ES",
+      "ariaLabel": "Switch language"
+    }
   }
 }

@@ -96,10 +96,34 @@ git push main
 
 ---
 
+## Social Links
+Stored in `src/data/social.ts` — single source of truth for all components.
+
+| Platform  | URL                                                        |
+|-----------|------------------------------------------------------------|
+| LinkedIn  | https://www.linkedin.com/in/nicolas-cendron-fernandes/     |
+| GitHub    | https://github.com/NicolasCendron                          |
+
+---
+
 ## Status
 - [x] Scaffold project (React 19 + Vite + TS + Tailwind v4 + Jest + React Router v7)
 - [x] Verify lint and test pipeline run clean
-- [ ] Write spec-01-design-system.md
-- [ ] Write spec-02-hero-section.md
-- [ ] Write spec-03-projects-section.md
-- [ ] Write spec-04-deployment.md
+- [x] spec-01 — Design system tokens
+- [x] spec-02 — Hero section (with i18n)
+- [ ] spec-03 — Navbar (LinkedIn + GitHub + language switcher)
+- [ ] spec-04 — Projects section (Netflix-style)
+- [ ] spec-05 — Contact section
+- [ ] spec-06 — Deployment (GitHub Actions + Vercel + domain)
+
+## Backlog / Wishlist
+Items to spec and build — not yet prioritised.
+
+- [ ] **Navbar** — sticky after hero scroll, LinkedIn + GitHub icon links, language switcher (EN/ES)
+- [ ] **Projects section** — Netflix-style, main projects row + minor projects row
+- [ ] **Contact section** — form or direct links
+- [ ] **Project sub-pages** — `/projects/:slug` module routes
+- [ ] **CV / Resume download** — PDF export link in navbar or hero
+- [ ] **Dark/light mode** — optional, low priority
+- [ ] **GitHub Actions CI** — lint + build on every PR
+- [ ] **Vercel deployment** — custom domain `nicolascendron.dev`

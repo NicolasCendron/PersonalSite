@@ -1,3 +1,4 @@
+import heroPhoto from '../../assets/hero.jpeg'
 import { HeroHeadline } from './HeroHeadline'
 import { HeroAvatar } from './HeroAvatar'
 import { TechChips } from './TechChips'
@@ -15,7 +16,7 @@ export function Hero() {
           <TechChips />
           <HeroCTAs />
         </div>
-        <HeroAvatar src="/photo.jpg" alt="Nicolas Cendron" />
+        <HeroAvatar src={heroPhoto} alt="Nicolas Cendron" />
       </div>
     </section>
   )

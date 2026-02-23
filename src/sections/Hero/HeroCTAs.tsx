@@ -6,18 +6,11 @@ export function HeroCTAs() {
   return (
     <div className="flex flex-wrap gap-4 mt-8">
       <a
-        data-testid="cta-primary"
-        href="#projects"
+        data-testid="cta-contact"
+        href="#contact"
         className="px-6 py-3 rounded-md bg-accent text-text font-medium text-body transition-colors duration-fast ease-brand hover:bg-accent-dim"
       >
-        {t('hero.cta.primary')}
-      </a>
-      <a
-        data-testid="cta-secondary"
-        href="#contact"
-        className="px-6 py-3 rounded-md border border-border text-text-muted font-medium text-body transition-colors duration-fast ease-brand hover:border-accent hover:text-text"
-      >
-        {t('hero.cta.secondary')}
+        {t('hero.cta.contact')}
       </a>
     </div>
   )

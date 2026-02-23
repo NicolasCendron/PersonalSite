@@ -11,7 +11,7 @@ export function Hero() {
       className="min-h-screen flex items-center px-6 lg:px-16 py-16"
     >
       <div className="w-full max-w-6xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-16">
-        <div className="flex-1">
+        <div className="flex-1 w-full min-w-0">
           <HeroHeadline />
           <TechChips />
           <HeroCTAs />

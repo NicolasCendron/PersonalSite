@@ -6,8 +6,11 @@ import { useIntersectionObserver } from './hooks/useIntersectionObserver'
 
 function App() {
   const heroRef = useRef<HTMLDivElement>(null)
-  const heroEntry = useIntersectionObserver(heroRef)
-  const navScrolled = (heroEntry?.intersectionRatio ?? 1) < 0.33
+  const heroEntry = useIntersectionObserver(heroRef, {
+    rootMargin: '0px 0px -67% 0px',
+    threshold: 0,
+  })
+  const navScrolled = heroEntry !== null && !heroEntry.isIntersecting
 
   return (
     <>

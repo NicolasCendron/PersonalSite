@@ -23,7 +23,7 @@ export function HeroHeadline() {
         </span>
       </div>
 
-      <h1 className="text-display font-bold text-text leading-tight mt-6 whitespace-pre-line">
+      <h1 className="text-4xl lg:text-display font-bold text-text leading-tight mt-6 whitespace-pre-line">
         {t('hero.headline')}
       </h1>
 

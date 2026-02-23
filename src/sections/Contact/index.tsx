@@ -1,10 +1,20 @@
-import { Mail, Linkedin, Github } from 'lucide-react'
+import { useState } from 'react'
+import { Mail, Send, Copy, Check } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
+import { GitHubIcon, LinkedInIcon } from '../../components/icons/BrandIcons'
 import { contact } from '../../data/contact'
 import { social } from '../../data/social'
 
 export function Contact() {
   const { t } = useTranslation()
+  const [copied, setCopied] = useState(false)
+
+  function handleCopy() {
+    navigator.clipboard.writeText(contact.email).then(() => {
+      setCopied(true)
+      setTimeout(() => setCopied(false), 3000)
+    })
+  }
 
   return (
     <section
@@ -29,17 +39,40 @@ export function Contact() {
         </p>
 
         <div className="mt-10 flex flex-col gap-4">
-          <a
-            data-testid="contact-email"
-            href={`mailto:${contact.email}`}
-            aria-label={t('contact.email')}
-            className="flex items-center gap-4 p-4 rounded-lg bg-surface border border-border hover:border-accent transition-colors duration-fast ease-brand group"
-          >
+          <div className="flex items-center gap-4 p-4 rounded-lg bg-surface border border-border">
             <Mail size={20} className="text-accent flex-shrink-0" />
-            <span className="text-body text-text group-hover:text-accent transition-colors duration-fast">
+            <span
+              data-testid="contact-email-address"
+              className="text-body text-text flex-1 min-w-0 truncate"
+            >
               {contact.email}
             </span>
-          </a>
+            <div className="flex items-center gap-1 flex-shrink-0">
+              <a
+                data-testid="contact-email-link"
+                href={`mailto:${contact.email}`}
+                aria-label={t('contact.email')}
+                className="p-2 rounded-md text-text-muted hover:text-accent hover:bg-surface2 transition-colors duration-fast ease-brand"
+              >
+                <Send size={16} />
+              </a>
+              <button
+                data-testid="contact-email-copy"
+                onClick={handleCopy}
+                aria-label={t('contact.copyEmail')}
+                className="relative p-2 w-8 h-8 flex items-center justify-center rounded-md text-text-muted hover:text-accent hover:bg-surface2 transition-colors duration-fast ease-brand cursor-pointer"
+              >
+                <Copy
+                  size={16}
+                  className={`absolute transition-all duration-normal ease-brand ${copied ? 'opacity-0 scale-75' : 'opacity-100 scale-100'}`}
+                />
+                <Check
+                  size={16}
+                  className={`absolute transition-all duration-normal ease-brand text-available ${copied ? 'opacity-100 scale-100' : 'opacity-0 scale-75'}`}
+                />
+              </button>
+            </div>
+          </div>
 
           <div className="flex gap-4 mt-2">
             <a
@@ -50,7 +83,7 @@ export function Contact() {
               aria-label={t('contact.linkedin')}
               className="flex-1 flex items-center justify-center gap-3 p-4 rounded-lg bg-surface border border-border hover:border-accent transition-colors duration-fast ease-brand group"
             >
-              <Linkedin size={20} className="text-accent" />
+              <LinkedInIcon size={20} className="text-accent" />
               <span className="text-body text-text group-hover:text-accent transition-colors duration-fast">
                 LinkedIn
               </span>
@@ -64,7 +97,7 @@ export function Contact() {
               aria-label={t('contact.github')}
               className="flex-1 flex items-center justify-center gap-3 p-4 rounded-lg bg-surface border border-border hover:border-accent transition-colors duration-fast ease-brand group"
             >
-              <Github size={20} className="text-accent" />
+              <GitHubIcon size={20} className="text-accent" />
               <span className="text-body text-text group-hover:text-accent transition-colors duration-fast">
                 GitHub
               </span>

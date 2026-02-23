@@ -1,5 +1,5 @@
-import { Github, Linkedin } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
+import { GitHubIcon, LinkedInIcon } from '../icons/BrandIcons'
 import { social } from '../../data/social'
 
 export function NavSocials() {
@@ -15,7 +15,7 @@ export function NavSocials() {
         aria-label={t('navbar.github')}
         className="text-text-muted hover:text-accent transition-colors duration-fast ease-brand"
       >
-        <Github size={20} />
+        <GitHubIcon size={20} />
       </a>
       <a
         data-testid="nav-linkedin"
@@ -25,7 +25,7 @@ export function NavSocials() {
         aria-label={t('navbar.linkedin')}
         className="text-text-muted hover:text-accent transition-colors duration-fast ease-brand"
       >
-        <Linkedin size={20} />
+        <LinkedInIcon size={20} />
       </a>
     </div>
   )
